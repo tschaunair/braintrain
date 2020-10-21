@@ -7,24 +7,27 @@ y = x
 c = 0
 w = 0
 
-    
 gesamt = time.time()
 def aufgabe_add(a):
     zahl1 = random.randrange(1,100)
     zahl2 = random.randrange(1,100)
-    print (zahl1, a, zahl2)
+    print ("\n", zahl1, a, zahl2)
     start = time.time()
     
-    ergebnis_in = int(input("Gib deine Loesung ein: "))
-    ergebnis = zahl1 + zahl2
+    ergebnis_in = int(input("\n""Gib deine Loesung ein: "))
+    if a == "+":
+        ergebnis = zahl1 + zahl2
+    else:
+        ergebnis = zahl1 * zahl2
   
     if  ergebnis == ergebnis_in:
-        print ("Korrekt")
+        print ("\n""Korrekt")
         ende = time.time()
         global c
         c = c + 1
     else:
-        print ("Falsch")
+        print ("\n""Falsch")
+        print(ergebnis, "waere richtig gewesen ...")
         ende = time.time()
         global w
         w = w + 1
@@ -37,8 +40,8 @@ while x >= 1:
 gesamt_ende = time.time()
 
 
-print("Durchschnittliche Loesungsdauer:")
+print("\n""Durchschnittliche Loesungsdauer:")
 print('{:5.3f}s'.format((gesamt_ende-gesamt)/y))
-print("Falsche:",w)
-print("Richtige:",c)
+print("\n""Falsche:",w)
+print("\n""Richtige:",c)
 
