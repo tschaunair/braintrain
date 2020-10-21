@@ -15,7 +15,7 @@ def aufgabe_add(a):
     print (zahl1, a, zahl2)
     start = time.time()
     
-    ergebnis_in = int(input("Gib die Loesung ein: "))
+    ergebnis_in = int(input("Gib deine Loesung ein: "))
     ergebnis = zahl1 + zahl2
   
     if  ergebnis == ergebnis_in:
