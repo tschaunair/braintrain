@@ -2,7 +2,7 @@ import random
 import time
 
 x = int(input("Wie viel Rechnungen moechtest du machen "))
-a = (raw_input("+ oder *   :  "))
+a = input("Plus oder Mal ? ")
 y = x
 c = 0
 w = 0
